@@ -37,4 +37,4 @@ def kill_default():
     return jsonify({'killed': killed, 'prefixes': STARTS_WITH})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3623)
+    app.run(host='0.0.0.0', port=1623)
