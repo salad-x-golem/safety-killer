@@ -10,7 +10,7 @@ After=network.target
 
 [Service]
 WorkingDirectory={working_directory}
-ExecStart={working_directory}/venv/bin/python {working_directory}/killer-server.py
+ExecStart={working_directory}/venv/bin/python -u {working_directory}/killer-server.py
 User=ubuntu
 
 # CPU / scheduling priority
