@@ -33,7 +33,7 @@ WantedBy=multi-user.target
         service_file.write(service_content)
     os.system('systemctl daemon-reload')
     os.system('systemctl enable killer-server.service')
-    os.system('systemctl start killer-server.service')
+    os.system('systemctl restart killer-server.service')
     print("Killer server service installed and started.")
 
 if __name__ == '__main__':
