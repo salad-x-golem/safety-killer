@@ -18,8 +18,10 @@ def kill_matching(prefixes):
             if name.startswith(prefix):
                 try:
                     proc.kill()
+                    print("Killed process:", name)
                     killed.append(name)
                 except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+                    print("Failed to kill process:", name)
                     pass
                 break
     return killed
